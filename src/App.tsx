@@ -22,17 +22,11 @@ function App() {
   const [showPlayer, setShowPlayer] = useState(true)
 
   const handleShow = ()=>{
-    setShowPlayer(!showPlayer)
+    setShowPlayer(!showPlayer)   
+  }
 
-    setPlayerName('')
-    setPlayerKind('')
-    setPlayerPerson('')
-    setPlayerForce('')
-    setPLayerDefence('')
-    setPLayerDefence('')
-    setPLayerAgility('')
-
-    
+  const handleReload = ()=>{
+    window.location.reload()
   }
  
 
@@ -55,7 +49,22 @@ function App() {
       
       <br />
       <br />
-      <button onClick={handleShow}>{showPlayer ? "Ver" : "Novo cadastro"}</button>
+      {
+        showPlayer ? 
+        (
+          <button onClick={handleShow}>
+            ver
+          </button>
+          
+        )
+        :
+        (
+          <button onClick={handleReload}>
+            novo
+          </button>
+        )
+      }
+
     </PlayerProvider>
   )
 }
