@@ -19,9 +19,7 @@ export const Player = ()=>{
                 <strong>Força: {force}</strong> <br />
                 <strong>Defesa: {defense}</strong> <br />
                 <strong>Agilidade: {agility}</strong> <br />
-                <strong>
-                    <img src={person} alt="personagem" width={300} />
-                </strong>
+                <strong>Personagem: {person}</strong>
             </header>
         </>
     )

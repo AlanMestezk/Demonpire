@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-import bardo from '../assets/bardo/bardo.png'
+//import bardo from '../assets/bardo/bardo.png'
 
 interface PlayerProviderProps {
   children: ReactNode;
@@ -29,12 +29,12 @@ type PlayerContextData = {
 };
 
 export const PlayerContext = createContext<PlayerContextData>({
-  name:         'Alan',
-  person:       bardo,
-  kind:         'Bardo',
-  force:        21,
-  defense:      19,
-  agility:      17,
+  name:         '',
+  person:       '',
+  kind:         '',
+  force:        '',
+  defense:      '',
+  agility:      '',
   handleChange: (_name, _kind, _force, _defense, _agility) => {},
 });
 
@@ -42,12 +42,12 @@ export const PlayerProvider = ({ children }: PlayerProviderProps) => {
 
   const [playerInfo, setPlayerInfo] = useState({
 
-    name:    'Alan',
-    person:   bardo,
-    kind:    'Bardo',
-    force:   '21',
-    defense: '19',
-    agility: '17'
+    name:    '',
+    person:   '',
+    kind:    '',
+    force:   '',
+    defense: '',
+    agility: ''
 
 });
 
